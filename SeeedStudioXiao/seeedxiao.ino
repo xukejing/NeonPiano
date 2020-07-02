@@ -91,7 +91,7 @@ void setup() {
 	MIDI.setHandleNoteOff(handleNoteOff);
 	strip.begin();
 	for (i = 0; i<strip.numPixels(); i++)
-		strip.setPixelColor(i, strip.Color(0, 0, 0));
+		strip.setPixelColor(i, 0x0A0A0A);
 	strip.show();
 	//   Serial.println("Arduino ready.");
 }
@@ -104,7 +104,7 @@ void loop() {
 		if (leds[i] == 1)
 			strip.setPixelColor(i, strip.gamma32(strip.ColorHSV(pixelHue)));
 		else
-			strip.setPixelColor(i, 0x000000);
+			strip.setPixelColor(i, 0x0A0A0A);
 	}
 	strip.show();
 }
